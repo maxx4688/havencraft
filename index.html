@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haven Craft - We Prioritize Elegance</title>
+    <title>Haven Craft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">H VEN CRAFT</a>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-            <a href="#" class="login-btn">Log In</a>
+            <a href="#" class="logo">HAVEN CRAFT</a>
+            <a href="https://t.me/maxxcraft" class="login-btn">Log In</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>WE<br>PRIORITIES<br>ELEGANCE</h1>
-        <a href="https://t.me/maxxcraft" class="visit-btn">Visit</a>
+        <div class="hero-image">
+            <img src="images/BTTH.png" alt="Hero Image">
+        </div>
+        <div class="hero-content">
+            <div class="new-collection">New Collection</div>
+            <h1>WE<br>PRIORITIES<br>ELEGANCE</h1>
+            <a href="https://t.me/maxxcraft" class="visit-btn">Visit</a>
+        </div>
     </section>
 
     <!-- Free Shipping Section -->
@@ -35,10 +37,16 @@
             <div class="subtitle">SHIPPING WORLDWIDE</div>
             <a href="#" class="cta-btn">Shop Now</a>
         </div>
+        <div class="promo-image">
+            <img src="images/BTTH.png" alt="Free Shipping">
+        </div>
     </section>
 
     <!-- 40% Off Section -->
-    <section class="promo-section">
+    <section class="promo-section dont-miss-section">
+        <div class="promo-image">
+            <img src="images/BTTH.png" alt="40% Off">
+        </div>
         <div class="promo-content">
             <h2>Don't Miss</h2>
             <div class="subtitle">40% OFF YOUR<br>SECOND POSTER</div>
@@ -58,36 +66,60 @@
     <!-- Collections -->
     <section class="collections">
         <div class="collection-card">
-            <img src="images/tropical-collection.jpg" alt="Tropical Collection">
+            <img src="images/BTTH.png" alt="Tropical Collection">
             <h3>TROPICAL COLLECTION</h3>
             <a href="#" class="cta-btn">Shop Now</a>
         </div>
         <div class="collection-card">
-            <img src="images/prickly-collection.jpg" alt="Prickly Collection">
+            <img src="images/BTTH.png" alt="Prickly Collection">
             <h3>PRICKLY COLLECTION</h3>
             <a href="#" class="cta-btn">Shop Now</a>
         </div>
     </section>
 
+    <section class="scrolling-text-section">
+        <div class="scrolling-text-container">
+            <div class="scrolling-text" id="scrollingText">
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+                <span>WE PRIORITIES ELEGANCE •</span>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Image Gallery -->
     <section class="image-gallery">
         <div class="image-item">
-            <img src="images/gallery-1.jpg" alt="Gallery Image 1">
+            <img src="images/BTTH.png" alt="Gallery Image 1">
             <h4>I'm an image title</h4>
             <p>Describe your image here. Use catchy text to tell people the story behind the photo.<br>Go to "Manage Media" to add your content.</p>
         </div>
         <div class="image-item">
-            <img src="images/gallery-2.jpg" alt="Gallery Image 2">
+            <img src="images/BTTH.png" alt="Gallery Image 2">
             <h4>I'm an image title</h4>
             <p>Describe your image here. Use catchy text to tell people the story behind the photo.<br>Go to "Manage Media" to add your content.</p>
         </div>
     </section>
 
-    <!-- Freedom Collection -->
-    <section class="promo-section">
-        <div class="promo-content">
-            <h3>FREEDOM COLLECTION</h3>
-            <a href="#" class="cta-btn">Shop Now</a>
+    <!-- Buy Me a Coffee Section -->
+    <section class="bmc-section">
+        <div class="bmc-content">
+            <img src="images/bmc.png" alt="Buy Me a Coffee" class="bmc-icon">
+            <h3>Buy Me a Coffee</h3>
+            <p>If you enjoy my work and would like to support me, consider buying me a coffee. Your support helps me continue creating and sharing quality content.</p>
+            <a href="https://buymeacoffee.com/maxx4688" target="_blank" class="bmc-btn">
+                <span class="bmc-btn-text">Buy me a coffee</span>
+            </a>
         </div>
     </section>
 
@@ -107,14 +139,96 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-title">#POSTER_GAL</div>
+            <div class="footer-title">#ASHISH</div>
             <ul class="social-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
                 <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Telegram</a></li>
             </ul>
             <div class="copyright">© Haven Craft, All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        let scrollOffset = 0;
+        let animationOffset = 0;
+        const scrollingText = document.getElementById('scrollingText');
+        const scrollSpeed = 0.5;
+        const autoScrollSpeed = 0.9; // pixels per frame for auto-scroll
+
+        // Initialize after page loads to ensure dimensions are calculated
+        function initScrollingText() {
+            // Wait for fonts and layout to be ready
+            if (document.fonts) {
+                document.fonts.ready.then(() => {
+                    initializeAnimation();
+                });
+            } else {
+                setTimeout(initializeAnimation, 300);
+            }
+        }
+
+        function initializeAnimation() {
+            // Ensure elements are fully rendered
+            const firstSpan = scrollingText.querySelector('span');
+            if (!firstSpan || firstSpan.offsetWidth === 0) {
+                // If not ready, try again
+                setTimeout(initializeAnimation, 50);
+                return;
+            }
+
+            // Calculate the width of one span for seamless looping
+            const spanWidth = firstSpan.offsetWidth + 64; // width + gap (4rem = 64px)
+            const totalSpans = scrollingText.querySelectorAll('span').length;
+            const loopDistance = (spanWidth * totalSpans) / 2; // Move half the total width for seamless loop
+
+            // Start with first full text visible (at position 0, first span starts from left edge)
+            // This ensures a complete text is visible from the start before animation begins
+            animationOffset = 0;
+            
+            // Set initial position to show first complete text
+            scrollingText.style.transform = `translateX(0)`;
+
+            // Small delay before starting animation to ensure initial state is visible
+            setTimeout(() => {
+                // Auto-scroll animation
+                function animate() {
+                    animationOffset += autoScrollSpeed;
+                    
+                    // Reset when we've moved one complete set of spans (seamless loop)
+                    if (animationOffset >= loopDistance) {
+                        animationOffset = animationOffset - loopDistance;
+                    }
+                    
+                    // Apply combined offset
+                    scrollingText.style.transform = `translateX(calc(-${animationOffset}px + ${scrollOffset}px))`;
+                    
+                    requestAnimationFrame(animate);
+                }
+
+                // Start animation
+                animate();
+            }, 100); // Small delay to show initial state
+        }
+
+        // Wait for page to fully load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initScrollingText);
+        } else {
+            // DOM is already ready
+            initScrollingText();
+        }
+
+        // Scroll-based movement
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollDelta = currentScrollTop - lastScrollTop;
+            
+            scrollOffset += scrollDelta * scrollSpeed;
+            
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+    </script>
 </body>
 </html>
