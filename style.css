@@ -47,12 +47,48 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
 body {
     font-family: 'Playfair Display', serif;
     line-height: 1.6;
     color: var(--text-primary);
     overflow-x: hidden;
     background: var(--bg-body);
+}
+
+/* Custom Cursor Follower (hidden on touch devices via JS) */
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    width: 28px;
+    height: 28px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    transition: width 0.35s ease, height 0.35s ease, background 0.2s ease;
+}
+
+.cursor-outline.cursor-hover {
+    width: 200px;
+    height: 200px;
+}
+
+/* Invert only over buttons and text (not images/cards) */
+.cursor-outline.cursor-invert {
+    background: #fff;
+    mix-blend-mode: difference;
+}
+
+@media (hover: none) {
+    .cursor-outline {
+        display: none !important;
+    }
 }
 
 /* Header & Navigation */
