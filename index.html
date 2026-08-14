@@ -189,7 +189,7 @@
         }
         animateCursor();
 
-        const invertElements = 'a, button, .scrolling-text-container, input, label, .logo, .footer-title, .social-links a, .new-collection';
+        const invertElements = 'h1, h2, h3, h4, p, .logo, .footer-title, .scrolling-text-container, .new-collection, .subtitle, .social-links a, .copyright, .newsletter h3, label';
         document.querySelectorAll(invertElements).forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorOutline.classList.add('cursor-hover');
@@ -198,6 +198,17 @@
             el.addEventListener('mouseleave', () => {
                 cursorOutline.classList.remove('cursor-hover');
                 cursorOutline.classList.remove('cursor-invert');
+            });
+        });
+
+        const buttonElements = '.login-btn, .visit-btn, .cta-btn, .bmc-btn, button';
+        document.querySelectorAll(buttonElements).forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorOutline.classList.remove('cursor-hover', 'cursor-invert');
+                cursorOutline.classList.add('cursor-hide');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorOutline.classList.remove('cursor-hide');
             });
         });
 

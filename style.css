@@ -71,7 +71,7 @@ body {
     height: 28px;
     background: var(--color-primary);
     border-radius: 50%;
-    transition: width 0.35s ease, height 0.35s ease, background 0.2s ease;
+    transition: width 0.35s ease, height 0.35s ease, background 0.2s ease, opacity 0.35s ease;
 }
 
 .cursor-outline.cursor-hover {
@@ -79,7 +79,13 @@ body {
     height: 200px;
 }
 
-/* Invert only over buttons and text (not images/cards) */
+.cursor-outline.cursor-hide {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* Invert only over text (not buttons, images, or cards) */
 .cursor-outline.cursor-invert {
     background: #fff;
     mix-blend-mode: difference;
