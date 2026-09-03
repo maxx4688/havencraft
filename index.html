@@ -9,79 +9,151 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="is-preloading">
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-intro" id="preloaderIntro">
+            <div class="preloader-logo">HAVEN CRAFT</div>
+        </div>
+        <div class="preloader-stairs" id="preloaderStairs" aria-hidden="true"></div>
+    </div>
+
     <!-- Custom Cursor -->
     <div class="cursor-outline" id="cursorOutline"></div>
 
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">HAVEN CRAFT</a>
-            <a href="https://t.me/maxxcraft" class="login-btn">Log In</a>
+            <a href="#" class="logo cursor-scale">HAVEN CRAFT</a>
+            <a href="https://buymeacoffee.com/maxx4688" class="login-btn">BMC Page</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-image">
-            <img src="images/BTTH.png" alt="Hero Image">
+            <img src="images/hero_section.png" alt="Hero Image">
         </div>
         <div class="hero-content">
-            <div class="new-collection">New Collection</div>
-            <h1>WE<br>PRIORITIES<br>ELEGANCE</h1>
-            <a href="https://t.me/maxxcraft" class="visit-btn">Visit</a>
+            <div class="cursor-scale">
+                <div class="new-collection">New Collection</div>
+                <h1>WE<br>PRIORITIES<br>ELEGANCE</h1>
+            </div>
+            <div class="hero-social-row" aria-label="Social links">
+                <span class="magnetic-wrap">
+                    <a href="https://t.me/maxxcraft" class="side-social-btn side-social-btn--telegram magnetic-btn" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <span class="magnetic-inner">
+                            <svg class="side-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.695.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </span>
+                <span class="magnetic-wrap">
+                    <a href="https://instagram.com/maxxcraft4688" class="side-social-btn side-social-btn--instagram magnetic-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <span class="magnetic-inner">
+                            <svg class="side-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </span>
+            </div>
         </div>
     </section>
 
-    <!-- Free Shipping Section -->
+    <!-- AMOLED Section -->
     <section class="promo-section free-shipping">
         <div class="promo-content">
-            <h2>Free</h2>
-            <div class="subtitle">SHIPPING WORLDWIDE</div>
-            <a href="#" class="cta-btn">Shop Now</a>
+            <div class="cursor-scale">
+                <h2>AMOLED</h2>
+                <div class="subtitle">Deep blacks and vivid colour made for AMOLED screens — a bold collection that pops while saving battery.</div>
+            </div>
+            <a href="https://t.me/maxxcraft/1009" class="cta-btn">Get Now</a>
         </div>
         <div class="promo-image">
-            <img src="images/BTTH.png" alt="Free Shipping">
+            <img src="images/amoled.png" alt="AMOLED">
         </div>
     </section>
 
-    <!-- 40% Off Section -->
-    <section class="promo-section dont-miss-section">
+    <!-- Scenery Section -->
+    <section class="promo-section scenery-section">
         <div class="promo-image">
-            <img src="images/BTTH.png" alt="40% Off">
+            <img src="images/landscape.png" alt="Scenery">
         </div>
         <div class="promo-content">
-            <h2>Don't Miss</h2>
-            <div class="subtitle">40% OFF YOUR<br>SECOND POSTER</div>
-            <a href="#" class="cta-btn">Order Now</a>
+            <div class="cursor-scale">
+                <h2>Scenery</h2>
+                <div class="subtitle">Soft horizons and calm landscapes,<br>crafted to bring quiet depth to your screen
+                    with our scenery collection.</div>
+            </div>
+            <a href="https://t.me/maxxcraft/1138" class="cta-btn">Get Now</a>
+        </div>
+    </section>
+
+    <!-- Desktop Wallpapers Section -->
+    <section class="promo-section desktop-section">
+        <div class="promo-content">
+            <div class="cursor-scale">
+                <h2>Desktop</h2>
+                <div class="subtitle">We also craft wallpapers for MacBooks,<br>laptops and desktops — high-resolution designs
+                    made to look stunning on every wide screen.</div>
+            </div>
+            <a href="https://t.me/maxxcraft/254" class="cta-btn">Get Now</a>
+        </div>
+        <div class="promo-image">
+            <img src="images/mac.png" alt="Desktop wallpapers on MacBook">
+        </div>
+    </section>
+
+    <!-- Minimalism Section -->
+    <section class="promo-section dont-miss-section">
+        <div class="promo-image">
+            <img src="images/minimal_section.png" alt="minimal">
+        </div>
+        <div class="promo-content">
+            <div class="cursor-scale">
+                <h2>Minimalism</h2>
+                <div class="subtitle">Minimalism is also in the list,<br>Our collection is way more huge than you may think,
+                    Lot more masterpieces are waiting for you at
+                    Haven Craft.</div>
+            </div>
+            <a href="#" class="cta-btn">Visit BMC</a>
         </div>
     </section>
 
     <!-- Fresh Posters Section -->
     <section class="promo-section">
-        <div class="promo-content">
-            <h2>FRESH<br>POSTERS</h2>
-            <div class="subtitle">This Summer</div>
-            <p>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text".</p>
+        <div class="promo-content cursor-scale">
+            <h2 class="fresh">FRESH COLLECTIONS</h2>
+            <div class="subtitle">by Haven Craft</div>
+            <p>Explore the vast collections of wallpaper categories to make your devices look elegant.</p>
         </div>
     </section>
 
-    <!-- Collections -->
-    <section class="collections">
-        <div class="collection-card">
-            <img src="images/BTTH.png" alt="Tropical Collection">
-            <h3>TROPICAL COLLECTION</h3>
-            <a href="#" class="cta-btn">Shop Now</a>
-        </div>
-        <div class="collection-card">
-            <img src="images/BTTH.png" alt="Prickly Collection">
-            <h3>PRICKLY COLLECTION</h3>
-            <a href="#" class="cta-btn">Shop Now</a>
-        </div>
-    </section>
+    <!-- Phone Showcase -->
+    <div class="phone-showcase-pin" id="phoneShowcasePin">
+        <section class="phone-showcase" id="phoneShowcase">
+            <div class="phone-showcase-bg" id="phoneShowcaseBg" aria-hidden="true">HAVEN CRAFT</div>
+            <div class="phone-showcase-row" id="phoneShowcaseRow">
+                <div class="phone-mockup-wrap" data-name="Space">
+                    <img src="images/space.png" alt="Space wallpaper" class="phone-mockup">
+                </div>
+                <div class="phone-mockup-wrap" data-name="Scenery">
+                    <img src="images/scenary.png" alt="Scenery wallpaper" class="phone-mockup">
+                </div>
+                <div class="phone-mockup-wrap" data-name="Minimalist">
+                    <img src="images/minimalist.png" alt="Minimalist wallpaper" class="phone-mockup">
+                </div>
+                <div class="phone-mockup-wrap" data-name="Material">
+                    <img src="images/material.png" alt="Material wallpaper" class="phone-mockup">
+                </div>
+            </div>
+        </section>
+    </div>
 
     <section class="scrolling-text-section">
-        <div class="scrolling-text-container" data-lenis-prevent>
+        <div class="scrolling-text-container cursor-scale" data-lenis-prevent>
             <div class="scrolling-text" id="scrollingText">
                 <span>WE PRIORITIES ELEGANCE •</span>
                 <span>WE PRIORITIES ELEGANCE •</span>
@@ -100,17 +172,28 @@
     </section>
 
 
-    <!-- Image Gallery -->
-    <section class="image-gallery">
-        <div class="image-item">
-            <img src="images/BTTH.png" alt="Gallery Image 1">
-            <h4>I'm an image title</h4>
-            <p>Describe your image here. Use catchy text to tell people the story behind the photo.<br>Go to "Manage Media" to add your content.</p>
+    <!-- .PNG App Promo -->
+    <section class="promo-section app-promo-section" id="dotpng">
+        <div class="promo-content">
+            <p class="app-promo-kicker">
+                <span class="app-promo-kicker-dot" aria-hidden="true"></span>
+                The App
+            </p>
+            <div class="cursor-scale">
+                <h2 class="app-promo-title">
+                    <img src="images/hard_opacity.png" alt=".PNG" class="app-promo-logo">
+                </h2>
+                <div class="subtitle">Get every wallpaper from the BMC page<br>in one curated app — clean grids, soft motion,<br>and elegance first.</div>
+            </div>
+            <ul class="app-promo-tags" aria-label="App highlights">
+                <li>BMC library</li>
+                <li>Android ready</li>
+                <li>Elegance first</li>
+            </ul>
+            <a href="https://maxx4688.github.io/portfolio/projects/dotpng.html" class="cta-btn app-promo-cta" target="_blank" rel="noopener noreferrer">Explore App</a>
         </div>
-        <div class="image-item">
-            <img src="images/BTTH.png" alt="Gallery Image 2">
-            <h4>I'm an image title</h4>
-            <p>Describe your image here. Use catchy text to tell people the story behind the photo.<br>Go to "Manage Media" to add your content.</p>
+        <div class="promo-image">
+            <img src="images/elegance.png" alt=".PNG app — Elegance Priority">
         </div>
     </section>
 
@@ -118,35 +201,39 @@
     <section class="bmc-section">
         <div class="bmc-content">
             <img src="images/bmc.png" alt="Buy Me a Coffee" class="bmc-icon">
-            <h3>Buy Me a Coffee</h3>
-            <p>If you enjoy my work and would like to support me, consider buying me a coffee. Your support helps me continue creating and sharing quality content.</p>
+            <div class="cursor-scale">
+                <h3>Buy Me a Coffee</h3>
+                <p>If you enjoy my work and would like to support me, consider buying me a coffee. Your support helps me continue creating and sharing quality content.</p>
+            </div>
             <a href="https://buymeacoffee.com/maxx4688" target="_blank" class="bmc-btn">
                 <span class="bmc-btn-text">Buy me a coffee</span>
             </a>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <h3>Subscribe and stay on top of our latest news and promotions</h3>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Email*" required>
-            <label>
-                <input type="checkbox" checked>
-                Yes, subscribe me to your newsletter.
-            </label>
-            <button type="submit">Subscribe</button>
+    <!-- Contact Section -->
+    <section class="newsletter contact-section" id="contact">
+        <div class="cursor-scale contact-heading">
+            <h3>Send a message</h3>
+            <p class="contact-intro">Share your email, name, and a short description — we’ll open your mail app ready to send.</p>
+        </div>
+        <form class="newsletter-form contact-form" id="contactForm">
+            <input type="email" name="email" id="contactEmail" placeholder="Your email*" required autocomplete="email">
+            <input type="text" name="name" id="contactName" placeholder="Name* (used as subject)" required autocomplete="name">
+            <textarea name="description" id="contactDescription" placeholder="Description* (message body)" rows="5" required></textarea>
+            <p class="contact-status" id="contactStatus" hidden></p>
+            <button type="submit">Send Email</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-content cursor-scale">
             <div class="footer-title">#ASHISH</div>
             <ul class="social-links">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Telegram</a></li>
+                <li><a href="https://instagram.com/maxx4688" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://x.com/maxx4688" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://t.me/maxx4688" target="_blank" rel="noopener noreferrer">Telegram</a></li>
             </ul>
             <div class="copyright">© Haven Craft, All rights reserved.</div>
         </div>
@@ -166,49 +253,186 @@
             smoothWheel: true,
             touchMultiplier: 2,
         });
+        window.lenis = lenis;
+        lenis.stop();
 
         lenis.on('scroll', ScrollTrigger.update);
         gsap.ticker.add((time) => lenis.raf(time * 1000));
         gsap.ticker.lagSmoothing(0);
 
-        // ========== CUSTOM CURSOR FOLLOWER ==========
+        // ========== LANDING PRELOADER (double stairs) ==========
+        (function initPreloader() {
+            const preloader = document.getElementById('preloader');
+            const stairsRoot = document.getElementById('preloaderStairs');
+            const logo = document.querySelector('.preloader-logo');
+            const intro = document.getElementById('preloaderIntro');
+            if (!preloader || !stairsRoot || !logo) return;
+
+            const COLS = 6;
+            for (let i = 0; i < COLS; i++) {
+                const col = document.createElement('div');
+                col.className = 'preloader-stair-col';
+                col.innerHTML = `
+                    <div class="preloader-stair preloader-stair--top"></div>
+                    <div class="preloader-stair preloader-stair--bottom"></div>
+                `;
+                stairsRoot.appendChild(col);
+            }
+
+            const tops = gsap.utils.toArray('.preloader-stair--top');
+            const bottoms = gsap.utils.toArray('.preloader-stair--bottom');
+
+            // Stairs start covering; intro black sits on top for the title beat
+            gsap.set(tops, { yPercent: 0 });
+            gsap.set(bottoms, { yPercent: 0 });
+
+            const tl = gsap.timeline({
+                defaults: { ease: 'power4.inOut' },
+                onComplete: () => {
+                    preloader.classList.add('is-done');
+                    preloader.remove();
+                    document.body.classList.remove('is-preloading');
+                    lenis.start();
+                    ScrollTrigger.refresh();
+                },
+            });
+
+            // 1) Haven Craft on black
+            tl.to(logo, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: 'power3.out',
+            })
+            .to(logo, {
+                opacity: 0,
+                y: -30,
+                filter: 'blur(6px)',
+                duration: 0.55,
+                ease: 'power3.in',
+                delay: 0.5,
+            })
+            // Drop the solid black intro so only the stair panels cover the page
+            .set(intro, { autoAlpha: 0 })
+            .set(preloader, { backgroundColor: 'transparent' })
+            // 2) Double stairs peel away — top↑ / bottom↓, left → right
+            .add('stairs')
+            .to(tops, {
+                yPercent: -101,
+                duration: 1.1,
+                stagger: { each: 0.1, from: 'start' },
+                ease: 'power4.inOut',
+            }, 'stairs')
+            .to(bottoms, {
+                yPercent: 101,
+                duration: 1.1,
+                stagger: { each: 0.1, from: 'start' },
+                ease: 'power4.inOut',
+            }, 'stairs')
+            .to(preloader, {
+                autoAlpha: 0,
+                duration: 0.2,
+            }, '-=0.15');
+        })();
+
+        // ========== CUSTOM CURSOR + MAGNETIC SOCIALS (minhpham-style) ==========
         const cursorOutline = document.getElementById('cursorOutline');
-        let mouseX = 0, mouseY = 0;
-        let outlineX = 0, outlineY = 0;
+        const lerp = (a, b, t) => a + (b - a) * t;
+        const cursorMotion = {
+            current: { x: window.innerWidth / 2, y: window.innerHeight / 2 },
+            last: { x: window.innerWidth / 2, y: window.innerHeight / 2 },
+        };
+        let magneticHover = false;
+        let rafPrev = null;
+
+        const magnets = [...document.querySelectorAll('.magnetic-wrap')].map(wrap => {
+            const action = wrap.querySelector('.magnetic-btn');
+            return {
+                el: wrap,
+                action,
+                motion: { current: { x: 0, y: 0 }, last: { x: 0, y: 0 } },
+            };
+        }).filter(m => m.action);
 
         document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+            cursorMotion.last.x = e.clientX;
+            cursorMotion.last.y = e.clientY;
         });
 
-        function animateCursor() {
-            outlineX += (mouseX - outlineX) * 0.12;
-            outlineY += (mouseY - outlineY) * 0.12;
-            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px) translate(-50%, -50%)`;
-            requestAnimationFrame(animateCursor);
+        function renderMotion(time) {
+            if (rafPrev === null) rafPrev = time;
+            // Same delta-time easing minhpham uses: 1 - 0.001^dt
+            const dt = Math.min(Math.max((time - rafPrev) / 1000, 0), 0.1);
+            rafPrev = time;
+            const ease = 1 - Math.pow(0.001, dt);
+
+            cursorMotion.current.x = lerp(cursorMotion.current.x, cursorMotion.last.x, ease);
+            cursorMotion.current.y = lerp(cursorMotion.current.y, cursorMotion.last.y, ease);
+            cursorOutline.style.transform =
+                `translate(${cursorMotion.current.x}px, ${cursorMotion.current.y}px) translate(-50%, -50%)`;
+
+            magnets.forEach(({ action, motion }) => {
+                motion.current.x = lerp(motion.current.x, motion.last.x, ease);
+                motion.current.y = lerp(motion.current.y, motion.last.y, ease);
+                action.style.transform =
+                    `translate(${motion.current.x}px, ${motion.current.y}px)`;
+            });
+
+            requestAnimationFrame(renderMotion);
         }
-        animateCursor();
+        requestAnimationFrame(renderMotion);
 
-        const invertElements = 'h1, h2, h3, h4, p, .logo, .footer-title, .scrolling-text-container, .new-collection, .subtitle, .social-links a, .copyright, .newsletter h3, label';
-        document.querySelectorAll(invertElements).forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursorOutline.classList.add('cursor-hover');
-                cursorOutline.classList.add('cursor-invert');
+        magnets.forEach(magnet => {
+            const { el, action, motion } = magnet;
+
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height / 2;
+                const dx = e.clientX - cx;
+                const dy = e.clientY - cy;
+                const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                // Pull icon exactly toward pointer, clamped to half the hit-area
+                const amount = Math.min(dist, rect.width / 2);
+                motion.last.x = (dx / dist) * amount;
+                motion.last.y = (dy / dist) * amount;
             });
+
+            el.addEventListener('mouseenter', () => {
+                magneticHover = true;
+                cursorOutline.classList.remove('cursor-hover', 'cursor-hide');
+            });
+
             el.addEventListener('mouseleave', () => {
-                cursorOutline.classList.remove('cursor-hover');
-                cursorOutline.classList.remove('cursor-invert');
+                magneticHover = false;
+                motion.last.x = 0;
+                motion.last.y = 0;
             });
         });
 
-        const buttonElements = '.login-btn, .visit-btn, .cta-btn, .bmc-btn, button';
-        document.querySelectorAll(buttonElements).forEach(el => {
+        // Scale over fixed text zones (not individual text nodes)
+        document.querySelectorAll('.cursor-scale').forEach(zone => {
+            zone.addEventListener('mouseenter', () => {
+                if (magneticHover) return;
+                cursorOutline.classList.add('cursor-hover');
+            });
+            zone.addEventListener('mouseleave', () => {
+                if (magneticHover) return;
+                cursorOutline.classList.remove('cursor-hover');
+            });
+        });
+
+        const hideCursorElements = '.login-btn, .visit-btn, .cta-btn, .bmc-btn, .hero-social-btn, button, .phone-mockup-wrap';
+        document.querySelectorAll(hideCursorElements).forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursorOutline.classList.remove('cursor-hover', 'cursor-invert');
+                cursorOutline.classList.remove('cursor-hover');
                 cursorOutline.classList.add('cursor-hide');
             });
             el.addEventListener('mouseleave', () => {
                 cursorOutline.classList.remove('cursor-hide');
+                if (el.closest('.cursor-scale')) {
+                    cursorOutline.classList.add('cursor-hover');
+                }
             });
         });
 
@@ -217,10 +441,48 @@
             cursorOutline.style.display = 'none';
         }
 
+        // ========== PHONE SHOWCASE BG TEXT ==========
+        const phoneShowcaseBg = document.getElementById('phoneShowcaseBg');
+        const phoneShowcaseDefault = 'HAVEN CRAFT';
+        let phoneBgFadeTimer = null;
+        let phoneBgTarget = phoneShowcaseDefault;
+        let phoneScrollControlsHover = false;
+
+        function setPhoneShowcaseText(nextText, { fade = true } = {}) {
+            const text = (nextText || phoneShowcaseDefault).toUpperCase();
+            if (text === phoneBgTarget && phoneShowcaseBg.textContent === text) return;
+            phoneBgTarget = text;
+
+            if (!fade) {
+                clearTimeout(phoneBgFadeTimer);
+                phoneShowcaseBg.classList.remove('is-fading');
+                phoneShowcaseBg.textContent = text;
+                return;
+            }
+
+            clearTimeout(phoneBgFadeTimer);
+            phoneShowcaseBg.classList.add('is-fading');
+            phoneBgFadeTimer = setTimeout(() => {
+                phoneShowcaseBg.textContent = phoneBgTarget;
+                phoneShowcaseBg.classList.remove('is-fading');
+            }, 280);
+        }
+
+        document.querySelectorAll('.phone-mockup-wrap').forEach(phone => {
+            phone.addEventListener('mouseenter', () => {
+                if (!phoneScrollControlsHover) return;
+                setPhoneShowcaseText(phone.dataset.name || phoneShowcaseDefault);
+            });
+            phone.addEventListener('mouseleave', () => {
+                if (!phoneScrollControlsHover) return;
+                setPhoneShowcaseText(phoneShowcaseDefault);
+            });
+        });
+
         // ========== SCROLL ANIMATIONS (GSAP ScrollTrigger) ==========
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.utils.toArray('.hero-content h1, .hero-content .new-collection, .hero-content .visit-btn').forEach((el, i) => {
+        gsap.utils.toArray('.hero-content h1, .hero-content .new-collection, .hero-content .hero-social-row').forEach((el, i) => {
             gsap.from(el, {
                 scrollTrigger: {
                     trigger: '.hero',
@@ -235,7 +497,7 @@
             });
         });
 
-        gsap.utils.toArray('.promo-section, .collections, .bmc-section, .newsletter').forEach(section => {
+        gsap.utils.toArray('.promo-section, .bmc-section, .newsletter').forEach(section => {
             gsap.from(section, {
                 scrollTrigger: {
                     trigger: section,
@@ -250,28 +512,209 @@
             });
         });
 
-        gsap.utils.toArray('.collection-card, .image-item').forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 90%',
-                    toggleActions: 'play none none none',
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.7,
-                delay: i * 0.1,
-                ease: 'power3.out',
+        // ========== PHONE SHOWCASE SCROLL SEQUENCE ==========
+        const phoneShowcasePin = document.getElementById('phoneShowcasePin');
+        const phoneShowcase = document.getElementById('phoneShowcase');
+        const phoneShowcaseRow = document.getElementById('phoneShowcaseRow');
+        const phoneWraps = gsap.utils.toArray('.phone-mockup-wrap');
+        const phoneImages = gsap.utils.toArray('.phone-mockup');
+        let phoneTimeline = null;
+        let phoneOffsets = [];
+
+        function getPhoneStackOffsets() {
+            const rowRect = phoneShowcaseRow.getBoundingClientRect();
+            const centerX = rowRect.left + rowRect.width / 2;
+            const centerY = rowRect.top + rowRect.height / 2;
+
+            return phoneWraps.map((phone) => {
+                const rect = phone.getBoundingClientRect();
+                return {
+                    x: centerX - (rect.left + rect.width / 2),
+                    y: centerY - (rect.top + rect.height / 2),
+                };
             });
+        }
+
+        function setPhoneSequenceComplete(isComplete) {
+            phoneShowcase.classList.toggle('is-complete', isComplete);
+            phoneScrollControlsHover = isComplete;
+        }
+
+        function buildPhoneShowcaseScroll() {
+            if (!phoneShowcasePin || !phoneShowcase || phoneWraps.length === 0) return;
+
+            if (phoneTimeline) {
+                phoneTimeline.scrollTrigger && phoneTimeline.scrollTrigger.kill();
+                phoneTimeline.kill();
+                phoneTimeline = null;
+            }
+
+            gsap.set(phoneWraps, { clearProps: 'transform,opacity,visibility,zIndex' });
+            setPhoneSequenceComplete(false);
+
+            void phoneShowcaseRow.offsetWidth;
+            phoneOffsets = getPhoneStackOffsets();
+
+            phoneWraps.forEach((phone, i) => {
+                gsap.set(phone, {
+                    x: phoneOffsets[i].x,
+                    y: i === 0 ? phoneOffsets[i].y + window.innerHeight * 0.55 : phoneOffsets[i].y,
+                    scale: i === 0 ? 2.35 : 1,
+                    opacity: i === 0 ? 1 : 0,
+                    zIndex: phoneWraps.length - i,
+                    force3D: true,
+                });
+            });
+
+            setPhoneShowcaseText(phoneWraps[0].dataset.name, { fade: false });
+
+            // One scroll step snaps to the next/previous phone (full change, no lingering blend)
+            const fade = 0.3;
+            const scatterDur = 0.5;
+            const stepCount = phoneWraps.length + 2; // intro + phones + done
+
+            const tl = gsap.timeline({
+                defaults: { ease: 'none' },
+                scrollTrigger: {
+                    trigger: phoneShowcasePin,
+                    start: 'top top',
+                    end: () => `+=${Math.round(window.innerHeight * stepCount * 0.9)}`,
+                    pin: true,
+                    pinSpacing: true,
+                    scrub: 0.2,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true,
+                    snap: {
+                        snapTo: 'labelsDirectional',
+                        duration: { min: 0.2, max: 0.45 },
+                        delay: 0,
+                        ease: 'power2.out',
+                    },
+                    onUpdate: (self) => {
+                        const doneProgress = tl.labels.done / tl.totalDuration();
+                        const atDone = self.progress >= doneProgress - 0.001;
+                        setPhoneSequenceComplete(atDone);
+
+                        if (atDone) {
+                            setPhoneShowcaseText(phoneShowcaseDefault, { fade: false });
+                            return;
+                        }
+
+                        let bestIdx = 0;
+                        let bestOpacity = -1;
+                        phoneWraps.forEach((phone, idx) => {
+                            const opacity = parseFloat(gsap.getProperty(phone, 'opacity')) || 0;
+                            if (opacity > bestOpacity) {
+                                bestOpacity = opacity;
+                                bestIdx = idx;
+                            }
+                        });
+                        setPhoneShowcaseText(phoneWraps[bestIdx].dataset.name, { fade: false });
+                    },
+                },
+            });
+
+            phoneTimeline = tl;
+
+            // Intro: rise + shrink into first phone
+            tl.addLabel('intro');
+            tl.to(phoneWraps[0], {
+                y: phoneOffsets[0].y,
+                scale: 1,
+                duration: 0.85,
+            });
+            tl.addLabel('phone-0');
+
+            // Scroll down/up snaps to next/previous phone with a quick complete fade
+            for (let i = 0; i < phoneWraps.length - 1; i++) {
+                const current = phoneWraps[i];
+                const next = phoneWraps[i + 1];
+
+                tl.to(current, { opacity: 0, duration: fade });
+                tl.fromTo(next, {
+                    opacity: 0,
+                    scale: 1,
+                    x: phoneOffsets[i + 1].x,
+                    y: phoneOffsets[i + 1].y,
+                }, {
+                    opacity: 1,
+                    duration: fade,
+                    immediateRender: false,
+                }, '<');
+                tl.addLabel(`phone-${i + 1}`);
+            }
+
+            // Final snap: scatter into the row at full opacity
+            tl.to(phoneWraps, {
+                x: 0,
+                y: 0,
+                scale: 1,
+                opacity: 1,
+                duration: scatterDur,
+                stagger: 0.04,
+            });
+            tl.addLabel('done');
+            // Small hold so the marquee below can enter cleanly after unpin
+            tl.to({}, { duration: 0.35 });
+        }
+
+        function whenPhonesReady(callback) {
+            const waits = phoneImages.map((img) => {
+                if (img.complete && img.naturalWidth) return Promise.resolve();
+                return new Promise((resolve) => {
+                    img.addEventListener('load', resolve, { once: true });
+                    img.addEventListener('error', resolve, { once: true });
+                });
+            });
+
+            Promise.all(waits).then(() => {
+                requestAnimationFrame(() => requestAnimationFrame(callback));
+            });
+        }
+
+        whenPhonesReady(() => {
+            buildPhoneShowcaseScroll();
+            ScrollTrigger.refresh();
+            // Pin spacer changes layout — refresh marquee measurements after
+            setTimeout(() => ScrollTrigger.refresh(), 100);
+        });
+
+        let phoneResizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(phoneResizeTimer);
+            phoneResizeTimer = setTimeout(() => {
+                whenPhonesReady(() => {
+                    buildPhoneShowcaseScroll();
+                    ScrollTrigger.refresh();
+                });
+            }, 200);
         });
 
         // ========== SCROLLING TEXT CAROUSEL ==========
         let lastScrollTop = 0;
         let scrollOffset = 0;
         let animationOffset = 0;
+        let marqueeLoopDistance = 0;
+        let marqueeRafId = 0;
         const scrollingText = document.getElementById('scrollingText');
         const scrollSpeed = 0.5;
         const autoScrollSpeed = 0.9; // pixels per frame for auto-scroll
+
+        function wrapMarqueeOffset(value, distance) {
+            if (!distance) return value;
+            return ((value % distance) + distance) % distance;
+        }
+
+        function applyMarqueeTransform() {
+            if (!marqueeLoopDistance) {
+                scrollingText.style.transform = 'translateX(0)';
+                return;
+            }
+            // Keep combined offset inside one loop so long pin-scrolls can't throw text off-screen
+            // scrollOffset adds with scroll so wheel direction matches marquee travel
+            const x = -wrapMarqueeOffset(animationOffset + scrollOffset, marqueeLoopDistance);
+            scrollingText.style.transform = `translateX(${x}px)`;
+        }
 
         // Initialize after page loads to ensure dimensions are calculated
         function initScrollingText() {
@@ -297,35 +740,26 @@
             // Calculate the width of one span for seamless looping
             const spanWidth = firstSpan.offsetWidth + 64; // width + gap (4rem = 64px)
             const totalSpans = scrollingText.querySelectorAll('span').length;
-            const loopDistance = (spanWidth * totalSpans) / 2; // Move half the total width for seamless loop
+            marqueeLoopDistance = (spanWidth * totalSpans) / 2;
 
-            // Start with first full text visible (at position 0, first span starts from left edge)
-            // This ensures a complete text is visible from the start before animation begins
             animationOffset = 0;
-            
-            // Set initial position to show first complete text
-            scrollingText.style.transform = `translateX(0)`;
+            scrollOffset = wrapMarqueeOffset(scrollOffset, marqueeLoopDistance);
+            applyMarqueeTransform();
 
-            // Small delay before starting animation to ensure initial state is visible
+            if (marqueeRafId) cancelAnimationFrame(marqueeRafId);
+
             setTimeout(() => {
-                // Auto-scroll animation
                 function animate() {
                     animationOffset += autoScrollSpeed;
-                    
-                    // Reset when we've moved one complete set of spans (seamless loop)
-                    if (animationOffset >= loopDistance) {
-                        animationOffset = animationOffset - loopDistance;
+                    if (animationOffset >= marqueeLoopDistance) {
+                        animationOffset -= marqueeLoopDistance;
                     }
-                    
-                    // Apply combined offset
-                    scrollingText.style.transform = `translateX(calc(-${animationOffset}px + ${scrollOffset}px))`;
-                    
-                    requestAnimationFrame(animate);
+                    applyMarqueeTransform();
+                    marqueeRafId = requestAnimationFrame(animate);
                 }
 
-                // Start animation
-                animate();
-            }, 100); // Small delay to show initial state
+                marqueeRafId = requestAnimationFrame(animate);
+            }, 100);
         }
 
         // Wait for page to fully load
@@ -344,7 +778,34 @@
             const currentScrollTop = scroll;
             const scrollDelta = currentScrollTop - lastScrollTop;
             scrollOffset += scrollDelta * scrollSpeed;
+            if (marqueeLoopDistance) {
+                scrollOffset = wrapMarqueeOffset(scrollOffset, marqueeLoopDistance);
+            }
             lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            applyMarqueeTransform();
+        });
+
+        // ========== CONTACT FORM (mailto — frontend only) ==========
+        const CONTACT_TO = 'alexmaxx8055@gmail.com';
+        const contactForm = document.getElementById('contactForm');
+        const contactStatus = document.getElementById('contactStatus');
+
+        contactForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('contactEmail').value.trim();
+            const name = document.getElementById('contactName').value.trim();
+            const description = document.getElementById('contactDescription').value.trim();
+
+            if (!email || !name || !description) return;
+
+            const subject = name;
+            const body = `${description}\n\n—\nFrom: ${email}`;
+            const mailto = `mailto:${CONTACT_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            contactStatus.hidden = false;
+            contactStatus.textContent = 'Opening your email app…';
+            window.location.href = mailto;
         });
     </script>
 </body>
