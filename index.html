@@ -215,15 +215,28 @@
     <!-- Contact Section -->
     <section class="newsletter contact-section" id="contact">
         <div class="cursor-scale contact-heading">
+            <p class="contact-kicker">Contact</p>
             <h3>Send a message</h3>
-            <p class="contact-intro">Share your email, name, and a short description — we’ll open your mail app ready to send.</p>
+            <p class="contact-intro">Share your name, email, and a short note.<br>I’ll get back to you soon.</p>
         </div>
-        <form class="newsletter-form contact-form" id="contactForm">
-            <input type="email" name="email" id="contactEmail" placeholder="Your email*" required autocomplete="email">
-            <input type="text" name="name" id="contactName" placeholder="Name* (used as subject)" required autocomplete="name">
-            <textarea name="description" id="contactDescription" placeholder="Description* (message body)" rows="5" required></textarea>
+        <form class="newsletter-form contact-form" id="contactForm" action="https://formspree.io/f/xqpkgbkn" method="POST">
+            <div class="contact-row">
+                <label class="contact-field" for="contactName">
+                    <span>Name</span>
+                    <input type="text" name="name" id="contactName" required autocomplete="name">
+                </label>
+                <label class="contact-field" for="contactEmail">
+                    <span>Email</span>
+                    <input type="email" name="email" id="contactEmail" required autocomplete="email">
+                </label>
+            </div>
+            <label class="contact-field" for="contactDescription">
+                <span>Message</span>
+                <textarea name="message" id="contactDescription" rows="4" required></textarea>
+            </label>
+            <input type="hidden" name="_subject" id="contactSubject" value="Haven Craft message">
             <p class="contact-status" id="contactStatus" hidden></p>
-            <button type="submit">Send Email</button>
+            <button type="submit">Send</button>
         </form>
     </section>
 
@@ -784,29 +797,6 @@
             }
             lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
             applyMarqueeTransform();
-        });
-
-        // ========== CONTACT FORM (mailto — frontend only) ==========
-        const CONTACT_TO = 'alexmaxx8055@gmail.com';
-        const contactForm = document.getElementById('contactForm');
-        const contactStatus = document.getElementById('contactStatus');
-
-        contactForm?.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const email = document.getElementById('contactEmail').value.trim();
-            const name = document.getElementById('contactName').value.trim();
-            const description = document.getElementById('contactDescription').value.trim();
-
-            if (!email || !name || !description) return;
-
-            const subject = name;
-            const body = `${description}\n\n—\nFrom: ${email}`;
-            const mailto = `mailto:${CONTACT_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            contactStatus.hidden = false;
-            contactStatus.textContent = 'Opening your email app…';
-            window.location.href = mailto;
         });
     </script>
 </body>
