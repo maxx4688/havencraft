@@ -322,12 +322,12 @@ nav {
 .hero-content {
     background:
         radial-gradient(120% 90% at 85% 12%, rgba(255, 255, 255, 0.55) 0%, transparent 55%),
-        linear-gradient(160deg, #eaf6f4 0%, #dcefea 42%, #d4e9e6 100%);
+        linear-gradient(90deg, #dbf1eb00 0%, #DBF1EB 100%);
     padding: clamp(3.5rem, 8vh, 6rem) clamp(3.5rem, 8vw, 6.5rem) clamp(3.5rem, 8vh, 6rem) clamp(3.75rem, 8.5vw, 7rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start;    
     position: relative;
     isolation: isolate;
 }
