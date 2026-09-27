@@ -13,10 +13,7 @@
 <body class="is-preloading">
 
     <div class="preloader" id="preloader" aria-hidden="true">
-        <div class="preloader-intro" id="preloaderIntro">
-            <div class="preloader-logo">HAVEN CRAFT</div>
-        </div>
-        <div class="preloader-stairs" id="preloaderStairs" aria-hidden="true"></div>
+        <div class="preloader-logo">HAVEN CRAFT</div>
     </div>
 
     <!-- Custom Cursor -->
@@ -306,44 +303,58 @@
         gsap.ticker.add((time) => lenis.raf(time * 1000));
         gsap.ticker.lagSmoothing(0);
 
-        // ========== LANDING PRELOADER (double stairs) ==========
+        // ========== LANDING PRELOADER (shrink into cursor) ==========
         (function initPreloader() {
             const preloader = document.getElementById('preloader');
-            const stairsRoot = document.getElementById('preloaderStairs');
             const logo = document.querySelector('.preloader-logo');
-            const intro = document.getElementById('preloaderIntro');
-            if (!preloader || !stairsRoot || !logo) return;
+            const cursorEl = document.getElementById('cursorOutline');
+            if (!preloader || !logo) return;
 
-            const COLS = 6;
-            for (let i = 0; i < COLS; i++) {
-                const col = document.createElement('div');
-                col.className = 'preloader-stair-col';
-                col.innerHTML = `
-                    <div class="preloader-stair preloader-stair--top"></div>
-                    <div class="preloader-stair preloader-stair--bottom"></div>
-                `;
-                stairsRoot.appendChild(col);
+            const isTouch = 'ontouchstart' in window;
+            const cursorSize = 28;
+            let startRadius = 0;
+            const endRadius = isTouch ? 0 : cursorSize / 2;
+
+            function followerPoint() {
+                if (!isTouch && cursorEl) {
+                    const box = cursorEl.getBoundingClientRect();
+                    if (box.width || box.height) {
+                        return {
+                            x: box.left + box.width / 2,
+                            y: box.top + box.height / 2,
+                        };
+                    }
+                }
+                return { x: window.innerWidth / 2, y: window.innerHeight / 2 };
             }
 
-            const tops = gsap.utils.toArray('.preloader-stair--top');
-            const bottoms = gsap.utils.toArray('.preloader-stair--bottom');
+            function coverRadius(x, y) {
+                return Math.hypot(
+                    Math.max(x, window.innerWidth - x),
+                    Math.max(y, window.innerHeight - y)
+                ) + 12;
+            }
 
-            // Stairs start covering; intro black sits on top for the title beat
-            gsap.set(tops, { yPercent: 0 });
-            gsap.set(bottoms, { yPercent: 0 });
+            function setIris(radius) {
+                const { x, y } = followerPoint();
+                const clip = `circle(${radius}px at ${x}px ${y}px)`;
+                preloader.style.clipPath = clip;
+                preloader.style.webkitClipPath = clip;
+            }
+
+            function finishPreloader() {
+                preloader.classList.add('is-done');
+                document.body.classList.remove('is-preloading');
+                preloader.remove();
+                lenis.start();
+                ScrollTrigger.refresh();
+            }
 
             const tl = gsap.timeline({
                 defaults: { ease: 'power4.inOut' },
-                onComplete: () => {
-                    preloader.classList.add('is-done');
-                    preloader.remove();
-                    document.body.classList.remove('is-preloading');
-                    lenis.start();
-                    ScrollTrigger.refresh();
-                },
+                onComplete: finishPreloader,
             });
 
-            // 1) Haven Craft on black
             tl.to(logo, {
                 opacity: 1,
                 y: 0,
@@ -358,27 +369,25 @@
                 ease: 'power3.in',
                 delay: 0.5,
             })
-            // Drop the solid black intro so only the stair panels cover the page
-            .set(intro, { autoAlpha: 0 })
-            .set(preloader, { backgroundColor: 'transparent' })
-            // 2) Double stairs peel away — top↑ / bottom↓, left → right
-            .add('stairs')
-            .to(tops, {
-                yPercent: -101,
-                duration: 1.1,
-                stagger: { each: 0.1, from: 'start' },
+            .add(() => {
+                const { x, y } = followerPoint();
+                startRadius = coverRadius(x, y);
+                setIris(startRadius);
+            })
+            .to({}, {
+                duration: 1.15,
                 ease: 'power4.inOut',
-            }, 'stairs')
-            .to(bottoms, {
-                yPercent: 101,
-                duration: 1.1,
-                stagger: { each: 0.1, from: 'start' },
-                ease: 'power4.inOut',
-            }, 'stairs')
-            .to(preloader, {
-                autoAlpha: 0,
-                duration: 0.2,
-            }, '-=0.15');
+                onUpdate: function () {
+                    const radius = startRadius + (endRadius - startRadius) * this.ratio;
+                    setIris(radius);
+                    if (!isTouch && this.ratio > 0.72) {
+                        const t = (this.ratio - 0.72) / 0.28;
+                        const c = Math.round(255 * t);
+                        preloader.style.mixBlendMode = 'difference';
+                        preloader.style.backgroundColor = `rgb(${c}, ${c}, ${c})`;
+                    }
+                },
+            });
         })();
 
         // ========== CUSTOM CURSOR + MAGNETIC SOCIALS (minhpham-style) ==========
